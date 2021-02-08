@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <router-view class="home-router"></router-view>
+    <bottom-tabs></bottom-tabs>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import BottomTabs from "../components/BottomTabs";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    BottomTabs
+  },
+  created() {
+  },
+  methods: {
   }
 };
 </script>
+<style>
+.home-router {
+  width: 100%;
+  height: calc(100% - 57px);
+}
+</style>
